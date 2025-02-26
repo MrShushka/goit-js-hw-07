@@ -7,8 +7,11 @@ function getRandomHexColor() {
   }
 
 const style = document.createElement("style");
+const spam = document.querySelector(".color");
 
 button.addEventListener("click", (enent) => {
-    style.textContent = `body { background-color: ${getRandomHexColor()}}`;
+    const color = getRandomHexColor();
+    style.textContent = `body { background-color: ${color}}`;
+    spam.textContent = color;
     document.head.appendChild(style);
 })
